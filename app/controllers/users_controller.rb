@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   def my_portfolio
-  	#@stock= StockQuote.price_by_symbol('AAPL')
+  	@user_stocks=current_user.user_stocks.all
+  	@user=current_user
   end
+
+
 end
