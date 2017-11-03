@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'friendships/destroy'
+
+  get 'friendship/destroy'
+
   devise_for :users, controllers: { registrations: 'registrations' }
 	  #devise_for :users, :controllers => {:registrations => "user/registrations"}
 	  resources :user_stocks,except: [:show,:edit,:update]
